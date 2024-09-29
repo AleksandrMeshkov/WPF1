@@ -1,0 +1,55 @@
+﻿<Window x:Class="PR2Meshkov.Zadacha3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR2Meshkov"
+        mc:Ignorable="d"
+        Title="Zadacha3" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   TextWrapping="Wrap" 
+                   Text="Дан целочисленный массив A размера N. Вывести номер первого из тех его элементов A[i], которые удовлетворяют двойному неравенству: A[1] &lt; A[i] &lt; A[10]. Если таких элементов нет, то вывести 0." 
+                   HorizontalAlignment="Center" 
+                   FontSize="16" 
+                   Margin="10"/>
+
+        <TextBox x:Name="inputTextBox" 
+                 Grid.Row="1" 
+                 Width="400" 
+                 Height="50" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center" 
+                 Margin="10" TextChanged="inputTextBox_TextChanged"/>
+
+        <!-- Заменяем outputTextBox на Label -->
+        <Label x:Name="outputLabel" 
+               Grid.Row="2" 
+               Width="400" 
+               Height="50" 
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Center" 
+               Margin="10" 
+               FontSize="16"
+               Content="" />
+
+        <Button Grid.Row="3" 
+                Content="Выполнить" 
+                Width="150" 
+                HorizontalAlignment="Center" 
+                Margin="10" Click="Button_Click"/>
+
+        <Button Grid.Row="4" 
+                Content="Вернуться обратно" 
+                Width="150" 
+                HorizontalAlignment="Left" 
+                Margin="10" Click="Button_return_Click"/>
+    </Grid>
+</Window>

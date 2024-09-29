@@ -1,0 +1,62 @@
+﻿<Window x:Class="PR2Meshkov.Zadacha5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Zadacha5" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   TextWrapping="Wrap" 
+                   Text="Сгенерировать массив размером M столбцов и N строк, содержащий числа от -10 до 10. Отобразить его пользователю. Отсортировать элементы в нем по возрастанию и по убыванию. Вывести результаты сортировки в двух таблицах. Найти максимальный и минимальный элементы массива."
+                   HorizontalAlignment="Center" 
+                   FontSize="16" 
+                   Margin="10"/>
+
+        
+
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,100">
+            <StackPanel Margin="0,0,20,0">
+                <TextBlock Text="Максимальное значение:" FontSize="16"/>
+                <Label x:Name="maxLabel" 
+                       Height="50"
+                       FontSize="16"
+                       Content="" />
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Минимальное значение:" FontSize="16"/>
+                <Label x:Name="minLabel" 
+                       Height="50"
+                       FontSize="16"
+                       Content="" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Vertical" VerticalAlignment="Stretch"/>
+
+        <Button Grid.Row="3" 
+                Content="Выполнить" 
+                Width="150" 
+                HorizontalAlignment="Center" 
+                Margin="10" Click="Button_Click"/>
+
+        <Button Grid.Row="4" 
+                Content="Вернуться обратно" 
+                Width="150" 
+                HorizontalAlignment="Left" 
+                Margin="10" Click="Button_return_Click"/>
+
+        <DataGrid x:Name="dataGrid" Margin="4,32,640,31" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Вывод массива" Binding="{Binding Name}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
